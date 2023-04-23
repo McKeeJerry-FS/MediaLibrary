@@ -15,19 +15,19 @@ namespace MediaLibrary.Client.Shared
         where TModel : MediaLibrary.Shared.Models.IModel, new()
     {
         [Inject] 
-        HttpClient Http { get; set; } = null;
+        HttpClient Http { get; set; } = null!;
         [Inject]
-        NavigationManager Navigation { get; set; } = null;
+        NavigationManager Navigation { get; set; } = null!;
         [Parameter]
         [EditorRequired]
-        public string ApiPath { get; set; } = String.Empty;
+        public string ApiPath { get; set; } = string.Empty;
         [Parameter]
         [EditorRequired]
         public int Id { get; set; }
-        private string _errorMessage = String.Empty;
+        private string _errorMessage = string.Empty;
         
         [Parameter]
-        public RenderFragment<TModel> ChildContent { get; set; }
+        public RenderFragment<TModel>? ChildContent { get; set; }
 
         public TModel Model { get; set; } = new();
 
