@@ -9,7 +9,7 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 
 
-namespace MediaLibrary.Client
+namespace MediaLibrary.Client.Shared
 {
     public partial class DataForm<TModel>
         where TModel : MediaLibrary.Shared.Models.IModel, new()
