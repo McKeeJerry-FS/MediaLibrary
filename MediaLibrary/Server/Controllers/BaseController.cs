@@ -7,7 +7,7 @@ namespace MediaLibrary.Server.Controllers
     public class BaseController<TModel, TEntity, TService> : ControllerBase
         where TModel : Shared.Models.IModel, new()
         where TEntity : Data.BaseEntity
-        where TService : Services.BaseService<TModel, TEntity>
+        where TService : Services.BaseService<TEntity, TModel>
     {
         private readonly TService _service;
         private readonly string _createPath;
