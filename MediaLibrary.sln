@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Server", "MediaLibrary\Server\MediaLibrary.Server.csproj", "{E01095FA-C0D6-4EB4-937B-BF2F8C7DB7AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaLibrary.Server", "MediaLibrary\Server\MediaLibrary.Server.csproj", "{E01095FA-C0D6-4EB4-937B-BF2F8C7DB7AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Client", "MediaLibrary\Client\MediaLibrary.Client.csproj", "{D70FEB20-8802-4A83-9025-81F654C47942}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaLibrary.Client", "MediaLibrary\Client\MediaLibrary.Client.csproj", "{D70FEB20-8802-4A83-9025-81F654C47942}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Shared", "MediaLibrary\Shared\MediaLibrary.Shared.csproj", "{609814E4-6022-47E7-A806-B626CC7CBCC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaLibrary.Shared", "MediaLibrary\Shared\MediaLibrary.Shared.csproj", "{609814E4-6022-47E7-A806-B626CC7CBCC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
