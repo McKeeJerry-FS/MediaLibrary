@@ -2,6 +2,7 @@
 @using MediaLibrary.Shared.Models
 @using System.Xml.Schema
 
+<h3>Add A New Actor</h3>
 <DataForm ApiPath="person" Id="Id" TModel="MediaLibrary.Shared.Models.PersonModel" Context="model">
     <p><label>Name: <InputText @bind-Value="model.Name" /></label></p>
     <p><label>BirthDay: <InputDate @bind-Value="model.BirthDay" /></label></p>

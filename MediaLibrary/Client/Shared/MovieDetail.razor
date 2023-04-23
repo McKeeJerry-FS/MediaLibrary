@@ -1,4 +1,5 @@
 ﻿@page "/movies/{Id:int}"
+<h2>Add A New Movie</h2>
 <DataForm ApiPath="movie" Id="Id" TModel="MediaLibrary.Shared.Models.MovieModel" Context="model">
     <p><label>Name: <InputText @bind-Value="model.Name" /></label></p>
     <p><label>Year: <InputNumber @bind-Value="model.Year" /></label></p>
