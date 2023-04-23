@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.ResponseCompression;
 using MediaLibrary.Server.Data;
 using Microsoft.EntityFrameworkCore;
+using MediaLibrary.Server;
+using MediaLibrary.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,9 @@ builder.Services.AddDbContext<MediaLibraryDbContext>(options =>
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddAutoMapper(typeof(MapperProfile));
+builder.Services.AddTransient<MovieService>();
+builder.Services.AddTransient<PersonService>();
 
 var app = builder.Build();
 
