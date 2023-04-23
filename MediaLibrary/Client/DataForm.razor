@@ -1,7 +1,7 @@
 ﻿@typeparam TModel
 @attribute [CascadingTypeParameter(nameof(TModel))]
 
-<EditForm Model="Model" Context="FormEditContext" OnValidSubmit="SaveItem">
+<EditForm Model="Model" Context="formEditContext" OnValidSubmit="SaveItem">
     <DataAnnotationsValidator />
     <CascadingValue Value=Model>
         @ChildContent(Model)
