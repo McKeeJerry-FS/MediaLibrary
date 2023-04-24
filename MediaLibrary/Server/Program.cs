@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.ResponseCompression;
-using MediaLibrary.Server.Data;
-using Microsoft.EntityFrameworkCore;
 using MediaLibrary.Server;
+using MediaLibrary.Server.Data;
 using MediaLibrary.Server.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,9 +16,10 @@ builder.Services.AddDbContext<MediaLibraryDbContext>(options =>
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddAutoMapper(typeof(MapperProfile));
+builder.Services.AddAutoMapper(typeof(MapperProfile), typeof(MediaLibrary.Shared.SharedMapperProfile));
 builder.Services.AddTransient<MovieService>();
 builder.Services.AddTransient<PersonService>();
+builder.Services.AddGrpc();
 
 var app = builder.Build();
 
@@ -42,10 +42,15 @@ app.UseStaticFiles();
 
 
 app.UseRouting();
+app.UseGrpcWeb();
 
 
 app.MapRazorPages();
 app.MapControllers();
+app.MapGrpcService<MediaLibrary.Server.Contracts.PersonContractService>()
+    .EnableGrpcWeb();
+app.MapGrpcService<MediaLibrary.Server.Contracts.MovieContractService>()
+    .EnableGrpcWeb();
 app.MapFallbackToFile("index.html");
 
 app.Run();
