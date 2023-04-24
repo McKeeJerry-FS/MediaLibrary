@@ -24,6 +24,9 @@
 
   <ItemGroup>
       <ProjectReference Include="..\..\MediaLibrary.Contracts\MediaLibrary.Contracts.csproj" />
+      <ProjectReference Include="..\..\MediaLibrary.Generators\MediaLibrary.Generators.csproj"
+						OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+	  
 	  <ProjectReference Include="..\Client\MediaLibrary.Client.csproj" />
       <ProjectReference Include="..\Shared\MediaLibrary.Shared.csproj" />
   </ItemGroup>
