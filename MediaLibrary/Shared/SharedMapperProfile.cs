@@ -19,6 +19,7 @@ namespace MediaLibrary.Shared
                 .ConvertUsing(x => x.ToDateTime());
 
             CreateMap<Contracts.Person, Models.PersonModel>().ReverseMap();
+            CreateMap<Contracts.Movie, Models.MovieModel>().ReverseMap();
         }
     }
 }

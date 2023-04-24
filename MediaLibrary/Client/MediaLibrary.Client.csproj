@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MediaLibrary.Contracts\MediaLibrary.Contracts.csproj" />
     <ProjectReference Include="..\Shared\MediaLibrary.Shared.csproj" />
   </ItemGroup>
 
