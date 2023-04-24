@@ -1,0 +1,38 @@
+﻿@page "/persons"
+@using MediaLibrary.Contracts
+@using MediaLibrary.Shared.Models
+@*@inject IMapper mapper
+@inject MediaLibrary.Contracts.PersonContract.PersonContractClient client*@
+
+<h2>Person List</h2>
+<GrpcDataView 
+    TItem="PersonModel" 
+    TContractItem="Person" 
+    TContractClient="PersonContract.PersonContractClient" />
+@*<DataView ApiPath="person" TItem="MediaLibrary.Shared.Models.PersonModel" />*@
+@*<table class="table table-bordered table-striped">
+    @foreach (var item in Data)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.BirthDay</td>
+            <td>@item.BirthPlace</td>
+        </tr>
+    }
+</table>
+
+
+@code{
+    public List<PersonModel> Data { get; set; } = new List<PersonModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var stream = client.GetList(new Empty()).ResponseStream;
+        while (await stream.MoveNext(default))
+        {
+            var item = mapper.Map<PersonModel>(stream.Current);
+            Data.Add(item);
+        }
+    }
+}*@
