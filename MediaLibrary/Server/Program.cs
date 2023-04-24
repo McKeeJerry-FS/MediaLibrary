@@ -16,7 +16,7 @@ builder.Services.AddDbContext<MediaLibraryDbContext>(options =>
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddAutoMapper(typeof(MapperProfile));
+builder.Services.AddAutoMapper(typeof(MapperProfile), typeof(MediaLibrary.Shared.SharedMapperProfile));
 builder.Services.AddTransient<MovieService>();
 builder.Services.AddTransient<PersonService>();
 builder.Services.AddGrpc();
@@ -47,6 +47,8 @@ app.UseGrpcWeb();
 
 app.MapRazorPages();
 app.MapControllers();
+app.MapGrpcService<MediaLibrary.Server.Contracts.PersonContractService>()
+    .EnableGrpcWeb();
 app.MapFallbackToFile("index.html");
 
 app.Run();
