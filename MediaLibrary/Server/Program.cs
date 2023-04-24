@@ -8,8 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<MediaLibraryDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibraryDT")); // Use MediaLibraryDT when working on the Desktop;
-    //options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibrary")); // Use MediaLibrary when working on the laptop; 
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibraryDT")); // Use MediaLibraryDT when working on the Desktop;
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibrary")); // Use MediaLibrary when working on the laptop; 
     options.EnableDetailedErrors();
     options.EnableSensitiveDataLogging();
 });
