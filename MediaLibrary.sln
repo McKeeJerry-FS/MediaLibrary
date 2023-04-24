@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaLibrary.Client", "Medi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaLibrary.Shared", "MediaLibrary\Shared\MediaLibrary.Shared.csproj", "{609814E4-6022-47E7-A806-B626CC7CBCC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Contracts", "MediaLibrary.Contracts\MediaLibrary.Contracts.csproj", "{D69F4E15-A156-436F-9156-966A1019F66A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaLibrary.Contracts", "MediaLibrary.Contracts\MediaLibrary.Contracts.csproj", "{D69F4E15-A156-436F-9156-966A1019F66A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

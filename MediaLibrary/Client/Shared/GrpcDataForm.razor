@@ -1,4 +1,7 @@
 ﻿@typeparam TModel
+@typeparam TContractItem
+@typeparam TContractClient
+
 @attribute [CascadingTypeParameter(nameof(TModel))]
 
 <EditForm Model="Model" Context="FormEditContext" OnValidSubmit="SaveItem">
@@ -6,14 +9,12 @@
     <CascadingValue Value=Model>
         @ChildContent(Model)
     </CascadingValue>
-    
+
     <hr />
     <button type="submit">Save</button>
-    
+
     @if (!string.IsNullOrWhiteSpace(_errorMessage))
     {
         <div class="alert alert-danger">@_errorMessage</div>
     }
-
 </EditForm>
-
