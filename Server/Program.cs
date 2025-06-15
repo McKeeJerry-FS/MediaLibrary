@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<MediaLibraryDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibrary"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibraryDesktop"));
 #if DEBUG
     options.EnableDetailedErrors();
     options.EnableSensitiveDataLogging();
