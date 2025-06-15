@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaLibrary.Shared.Model
 {
-    public class PersonModel
+    public class PersonModel : IModel
     {
         public int Id { get; set; }
         public string? Name { get; set; } = string.Empty;
