@@ -1,8 +1,18 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using MediaLibrary.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<MediaLibraryDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibrary"));
+#if DEBUG
+    options.EnableDetailedErrors();
+    options.EnableSensitiveDataLogging();
+#endif
+});
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
