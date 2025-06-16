@@ -6,7 +6,7 @@ using MediaLibrary.Shared.Model;
 
 namespace MediaLibrary.Server.Contracts
 {
-    public class PersonContractService : PersonContract.PersonContractBase
+    public class PersonContractService : PersonContract.PersonContractBase, IContractService<Person>
     {
         private readonly PersonService _personService;
         private readonly IMapper _mapper;
