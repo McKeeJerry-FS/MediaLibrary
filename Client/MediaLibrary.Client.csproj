@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Shared\MediaLibrary.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Shared\Model\" />
+  </ItemGroup>
+
 </Project>

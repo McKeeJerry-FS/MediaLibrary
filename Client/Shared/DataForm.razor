@@ -1,0 +1,26 @@
+﻿@typeparam TModel  
+@attribute [CascadingTypeParameter(nameof(TModel))]  
+
+<EditForm Model="Model"
+          Context="FormEditContext" OnValidSubmit="SaveItem">
+    <DataAnnotationsValidator />  
+    <CascadingValue Value="Model">  
+        @ChildContent(Model)  
+    </CascadingValue>  
+    <hr />  
+
+    <button type="submit">Submit</button> 
+    
+    @if (!string.IsNullOrWhiteSpace(_errorMessage))
+    {
+        <div class="alert alert-danger">@_errorMessage</div>
+    }
+</EditForm>  
+
+@code {  
+    [Parameter]  
+    public RenderFragment<TModel> ChildContent { get; set; }  
+
+    // Add the 'new()' constraint to the type parameter to fix the error  
+    public TModel Model { get; set; } = new();  
+}
