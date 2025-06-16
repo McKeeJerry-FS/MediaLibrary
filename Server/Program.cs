@@ -22,7 +22,10 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddTransient<MovieService>();
 builder.Services.AddTransient<PersonService>();
-builder.Services.AddAutoMapper(typeof(MapperProfile));
+builder.Services.AddAutoMapper(typeof(MapperProfile), typeof(MediaLibrary.Shared.SharedMapperProfile));
+
+builder.Services.AddGrpc();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -43,10 +46,13 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseGrpcWeb();
 
 
 app.MapRazorPages();
 app.MapControllers();
+app.MapGrpcService<MediaLibrary.Server.Contracts.PersonContractService>()
+   .EnableGrpcWeb();
 app.MapFallbackToFile("index.html");
 
 app.Run();

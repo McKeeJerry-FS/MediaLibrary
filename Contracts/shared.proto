@@ -1,5 +1,5 @@
 syntax = "proto3";
-package contract.shared;
+package contracts.shared;
 option csharp_namespace = "MediaLibrary.Contracts";
 
 message ItemRequest {
@@ -15,4 +15,4 @@ message GenericResponse{
 	bool success = 1;
 }
 
-message Empty;
+message Empty {}

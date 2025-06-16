@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Client", "Clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Shared", "Shared\MediaLibrary.Shared.csproj", "{0CC9B20A-4D42-4205-97C2-C9E0AB753422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Contracts", "MediaLibrary.Contracts\MediaLibrary.Contracts.csproj", "{D0D21764-8D8D-47EF-BA41-0B13E920311D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Contracts", "Contracts\MediaLibrary.Contracts.csproj", "{0B463F33-7A01-D783-1397-E958E83E1F03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{0CC9B20A-4D42-4205-97C2-C9E0AB753422}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CC9B20A-4D42-4205-97C2-C9E0AB753422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CC9B20A-4D42-4205-97C2-C9E0AB753422}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0D21764-8D8D-47EF-BA41-0B13E920311D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0D21764-8D8D-47EF-BA41-0B13E920311D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0D21764-8D8D-47EF-BA41-0B13E920311D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0D21764-8D8D-47EF-BA41-0B13E920311D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B463F33-7A01-D783-1397-E958E83E1F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B463F33-7A01-D783-1397-E958E83E1F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B463F33-7A01-D783-1397-E958E83E1F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B463F33-7A01-D783-1397-E958E83E1F03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
