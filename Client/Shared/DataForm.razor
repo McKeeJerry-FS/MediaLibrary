@@ -19,7 +19,7 @@
 
 @code {  
     [Parameter]  
-    public RenderFragment<TModel> ChildContent { get; set; }  
+    public RenderFragment<TModel>? ChildContent { get; set; }  
 
     // Add the 'new()' constraint to the type parameter to fix the error  
     public TModel Model { get; set; } = new();  

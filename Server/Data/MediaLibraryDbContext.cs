@@ -9,8 +9,8 @@ namespace MediaLibrary.Server.Data
         public MediaLibraryDbContext(DbContextOptions<MediaLibraryDbContext> options) : base(options) { }
 
 
-        public DbSet<Person> Persons { get; set; }
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Person>? Persons { get; set; }
+        public DbSet<Movie>? Movies { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
