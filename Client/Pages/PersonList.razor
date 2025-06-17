@@ -1,2 +1,7 @@
 ﻿@page "/persons"  
-<DataView ApiPath="person" TItem="MediaLibrary.Shared.Model.PersonModel" />
+@using MediaLibrary.Contracts  
+@using MediaLibrary.Shared.Model  
+<GrpcDataView  
+    TItem="PersonModel"  
+    TContractItem="Person"  
+    TContractClient="PersonContract.PersonContractClient"/>

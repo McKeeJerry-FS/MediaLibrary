@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Grpc.Core;
-using MediaLibrary.Contracts;
+using MediaLibrary.Contracts.Clients;
 using AutoMapper;
+using MediaLibrary.Contracts;
 
 namespace MediaLibrary.Client.Shared
 {

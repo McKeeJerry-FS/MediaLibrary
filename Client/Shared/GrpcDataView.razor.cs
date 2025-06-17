@@ -7,9 +7,7 @@ using AutoMapper;
 namespace MediaLibrary.Client.Shared
 {
     public partial class GrpcDataView<TItem, TContractItem, TContractClient>
-        where TItem : class, MediaLibrary.Shared.Model.IModel, new()
-        where TContractItem : class, new()
-        where TContractClient : ClientBase<TContractClient>, IContractClient<TContractItem>
+        where TContractClient : Grpc.Core.ClientBase<TContractClient>
     {
         [Inject]
         public NavigationManager Navigation { get; set; } = null!;
