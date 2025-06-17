@@ -10,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MediaLibraryDbContext>(options =>
 {
     // If working on this at home, use MediaLibraryDesktop for database access, other wise use MediaLibrary
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibrary"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibraryDesktop"));
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("MediaLibrary"));
 #if DEBUG
     options.EnableDetailedErrors();
     options.EnableSensitiveDataLogging();
@@ -51,7 +52,8 @@ app.UseGrpcWeb();
 
 app.MapRazorPages();
 app.MapControllers();
-app.MapGrpcService<MediaLibrary.Server.Contracts.PersonContractService>()
+app.MapGrpcService<MediaLibrary.Server.Contracts
+   .PersonContractService>()
    .EnableGrpcWeb();
 app.MapFallbackToFile("index.html");
 
