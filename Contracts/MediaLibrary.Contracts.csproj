@@ -18,6 +18,10 @@
 	<ItemGroup>
 		<Protobuf Include="shared.proto" GrpcServices="Server" />
 		<Protobuf Include="person.proto" GrpcServices="Server" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Clients\" />
 	</ItemGroup>	
 
 </Project>
